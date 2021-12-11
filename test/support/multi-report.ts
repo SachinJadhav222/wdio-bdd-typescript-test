@@ -4,7 +4,7 @@ const currentTime= new Date();
 report.generate({
 	//jsonDir: '.temp/json',
     jsonDir: './reports/json/',
-	reportPath: './reports/',
+	reportPath: './reports/html-report/',
     openReportInBrowser:true,
 	metadata:{
         browser: {

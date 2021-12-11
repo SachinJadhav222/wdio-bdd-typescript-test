@@ -1,3 +1,7 @@
 .tmp
 node_modules
-reports
+reports/assets
+reports/features
+reports/json
+reports/html-report
+

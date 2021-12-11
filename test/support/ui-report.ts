@@ -4,7 +4,7 @@ const options = {
     theme: 'bootstrap',
     jsonFolder: "reports",
     jsonFile: 'reports/json/*.json',
-    output: 'reports/test-report.html',
+    output: 'reports/html-report/test-report.html',
     reportSuiteAsScenarios: true,
     scenarioTimestamp: true,
     launchReport: true,
