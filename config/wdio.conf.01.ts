@@ -20,6 +20,8 @@ export const config: WebdriverIO.Config = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
+    path: "/wd/hub",
+    
     specs: [
         './test/features/HE/*.feature'
     ],

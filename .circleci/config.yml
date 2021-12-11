@@ -6,7 +6,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:14.15.1
-      - image: selenium/standalone-chrome:3.11.0
+      - image: selenium/standalone-chrome:96.0
 
     working_directory: ~/repo
 
@@ -55,42 +55,42 @@ jobs:
           path: /tmp/artifacts    
 
     
-  ui-test:
-    docker:
-      - image: circleci/node:10.19.0
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - run:
-          name: ui-test
-          command: echo 'npm run ci-ui-test'
-  deploy:
-    docker:
-      - image: circleci/node:10.19.0
-    steps:
-      - checkout
-      - run:
-          name: Deploy
-          command: echo 'Delpoys'
-  reports:
-    docker:
-      - image: circleci/node:10.19.0
-    steps:
-      - checkout
-      - run:
-          name: Test-Reports
-          command: echo 'Test- Reports'
+  # ui-test:
+  #   docker:
+  #     - image: circleci/node:10.19.0
+  #   working_directory: ~/repo
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: ui-test
+  #         command: echo 'npm run ci-ui-test'
+  # deploy:
+  #   docker:
+  #     - image: circleci/node:10.19.0
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: Deploy
+  #         command: echo 'Delpoys'
+  # reports:
+  #   docker:
+  #     - image: circleci/node:10.19.0
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: Test-Reports
+  #         command: echo 'Test- Reports'
 workflows:
   version: 2
   test-pipeline:
     jobs:
       - build
-      - ui-test:
-          requires:
-            - build
-      - deploy:
-          requires:
-            - ui-test
-      - reports:
-          requires:
-            - ui-test
+      # - ui-test:
+      #     requires:
+      #       - build
+      # - deploy:
+      #     requires:
+      #       - ui-test
+      # - reports:
+      #     requires:
+      #       - ui-test
