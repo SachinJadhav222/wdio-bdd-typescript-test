@@ -7,12 +7,9 @@ import MyAccountPage from '../../pages/UI/web_myaccount';
 
 
 
-
-//console.log('This out----->',this)
-
 Given(/^I am on the (\w+) page$/, async (page) => {
     page="";
-   // console.log('This in----->',this)
+    //console.log('This in----->',this)
     //await pages[page].open()
     await new Web_base().open(page);
 });
